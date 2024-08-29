@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriafam Tech Summit | Formulário de Inscrição</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            gap: 20px;
+        }
+        main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background-color: #9bb84e;
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease-in-out;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+            border-color: #7daa3c;
+            outline: none;
+        }
+        button[type="submit"] {
+            background-color: #9bb84e;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, transform 0.2s;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #7daa3c;
+            transform: translateY(-2px);
+        }
+        button[type="submit"]:focus {
+            box-shadow: 0 0 0 2px #7daa3c;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section>
+                <form action="inscricao.php" method="post">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Seu melhor email" required>
+
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    </fieldset>
+                    <button type="submit"  onclick="Inscricao()">Enviar Inscrição</button>
+                </form>
+            </section>
+        </main>
+     
+    </div>
+    <footer>
+        <p>&copy; 2024 Oriafam Tech Summit. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
